@@ -1,0 +1,205 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set font styles */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Style the header */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the navigation */
+nav {
+    background-color: #f7f7f7;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Style the main content area */
+main {
+    padding: 20px;
+}
+
+/* Style article headings and paragraphs */
+article {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    font-family: 'Noto Serif', serif;
+    font-size: 28px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+h2 {
+    font-family: 'Noto Serif', serif;
+    padding-top: 20px;
+    font-size: 24px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+h3{
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.info-box {
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    width: 300px;
+    float: right; 
+    margin: 10px;
+}
+
+.info-box-content p {
+    font-size: 16px;
+    background-color: #f2f2f2;
+    padding-left: 10px;
+}
+
+.info-box-image {
+    max-width: 100%;
+    display: block;
+    width: 200px;
+    margin: 0 auto 10px;
+}
+
+.smaller-info-box {
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    width: 200px;
+    float: right; 
+    margin: 10px;
+}
+/* .smaller-info-box-content {
+    background-color: #f2f2f2;
+    padding: 10px;
+} */
+
+/* .smaller-info-box-image {
+    max-width: 100%;
+    display: block;
+    width: 200px;
+    margin: 0 auto 10px;
+} */
+.clear {
+    clear: both;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.references {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#sidebar {    
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    border: none;
+    width: 200px; /* Adjust the width as needed */
+    padding: 20px; /* Add padding to the links */
+ 
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar li {
+    text-align: left;
+   
+}
+
+#sidebar a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+}
+
+#sidebar a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.nested-list {
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+/* Style for the links within the nested list */
+.nested-list li a {
+    margin-left: 20px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+/* Style for the nested list items */
+.nested-list li {
+    margin: 5px 0;
+}
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  
+  }
