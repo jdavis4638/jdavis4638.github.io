@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We're hiring!</title>
+    <link rel="stylesheet" href="css/acessible-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" aria-hidden="true">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const content = toggle.nextElementSibling;
+                    content.classList.toggle('active');
+                });
+        
+                // Add an event listener for the "keydown" event to handle the "Enter" key
+                toggle.addEventListener('keydown', function(event) {
+                    if (event.key === 'Enter') {
+                        event.preventDefault(); // Prevent the default behavior (e.g., form submission)
+                        const content = toggle.nextElementSibling;
+                        content.classList.toggle('active');
+                    }
+                });
+            });
+        });
+        </script>
+      
+</head>
+<body>
+    <a href="#content" class="skip-link">Skip to Content</a>
+    <header>
+        <h1>We're Hiring!</h1>
+        <nav>
+            <h3>Navigation Menu</h3>
+            <ul>
+                <li><a href="index.html"> <span class="material-icons">home</span>Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#who">Who We're Looking For</a></li>
+                <li><a href="#starter_kit">Starter Kit</a></li>
+                <li><a href="#baking_params">Baking Parameters</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="content">
+        <section id="about">
+            <h2>About us</h2>
+            <p>Are you tired of the daily grind, the 9-to-5 routine that feels more like a stale crouton than a fulfilling career? Well, we've got the dough for you! Welcome to "Rise & Shine Sourdough," where we take bread to new heights, and we're looking for a few passionate loaf lovers to join our bubbly, doughy team.</p>
+            <p>At Rise & Shine Sourdough, we believe in the power of sourdough magic. We're not just a bakery; we're a family of fermenters, a society of starters, and a club of culture carriers. When you join us, you're not just getting a job; you're becoming a bona fide bread wizard.</p>
+        </section>
+        <section id="who">
+            <h2>Who we're looking for:</h2>
+            As a Dough Maestro, your daily rituals will include:
+            <ul>
+                <li><span class ="material-icons">breakfast_dining</span>Crafting artisanal sourdough bread that's fluffier than a cloud.</li>
+                <li><span class ="material-icons">breakfast_dining</span>Nurturing our sourdough starters like they're your own offspring.</li>
+                <li><span class ="material-icons">breakfast_dining</span>Adding a dash of creativity to every batch, whether it's a classic boule, a twisted pretzel, or an experimental sourdough croissant.</li>
+                <li><span class ="material-icons">breakfast_dining</span>Spreading the word about the wonders of wild fermentation. No, you're not a salesperson; you're a sourdough evangelist!</li>
+            </ul>
+        </section>
+
+<section id="starter_kit">
+    <h2>What's in Your Starter Kit?</h2>
+    <ul class="dropdown-list" tabindex="0">
+        <li class="icon-list-item">
+            <span class="dropdown-toggle"  tabindex="0">A top-notch apron, because a Dough Maestro deserves the best.</span>
+            <div class="dropdown-content">
+                <p>This apron is not just any apron; it's a badge of honor for sourdough artisans. Made from organic flour bags (just kidding), it's stylish, durable, and guaranteed to make you look like a pro in the kitchen.</p>
+            </div>
+        </li>
+        <li class="icon-list-item">
+            <span class="dropdown-toggle"  tabindex="0">Sourdough starter adoption privileges.</span>
+            <div class="dropdown-content">
+                <p>Adopt your very own sourdough starter! We'll match you with a starter that suits your personality. Will it be Mild Mabel, Bold Bob, or Quirky Quinn? Start your sourdough journey with your new sour friend.</p>
+            </div>
+        </li>
+        <li class="icon-list-item">
+            <span class="dropdown-toggle"  tabindex="0">Unlimited access to our secret library of bread puns.</span>
+            <div class="dropdown-content">
+                <p>We have a treasure trove of bread puns that will make you laugh, cringe, and appreciate the doughy side of life. Puns are like bread, you can never have enough.</p>
+            </div>
+        </li>
+        <li class="icon-list-item">
+            <span class="dropdown-toggle" tabindex="0">A warm, doughy welcome from our quirky crew.</span>
+            <div class="dropdown-content">
+                <p>Our team is passionate about all things sourdough, and we're here to welcome you into our dough-loving family. Expect warm greetings, doughy hugs, and plenty of floury handshakes.</p>
+            </div>
+        </li>
+        <li class="icon-list-item">
+            <span class="dropdown-toggle" tabindex="0">The chance to shape your future. Literally!</span>
+            <div class="dropdown-content">
+                <p>With our starter kit, you get the opportunity to shape more than just dough. You'll shape your own destiny, one delicious loaf at a time. The power of sourdough is in your hands!</p>
+            </div>
+        </li>
+    </ul>
+</section>
+<section id="baking_params">
+    <table>
+        <caption><h3>Sourdough Baking Parameters</h3></caption>
+        <thead>
+            <tr>
+                <th scope="col">Flour Type</th>
+                <th scope="col">Hydration Rate</th>
+                <th scope="col">Fermentation Time</th>
+                <th scope="col">Target Dough Temperature</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">All-Purpose</th>
+                <td>75%</td>
+                <td>12 hours</td>
+                <td>75°F (24°C)</td>
+            </tr>
+            <tr>
+                <th scope="row">Whole Wheat</th>
+                <td>100%</td>
+                <td>18 hours</td>
+                <td>80°F (27°C)</td>
+            </tr>
+            <tr>
+                <th scope="row">Rye</th>
+                <td>85%</td>
+                <td>15 hours</td>
+                <td>78°F (26°C)</td>
+            </tr>
+        </tbody>
+        
+    </table>
+</section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name"><span class ="material-icons">face</span>Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email"><span class ="material-icons">email</span>Email:</label>
+                <input type="email" id="email" name="email">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
