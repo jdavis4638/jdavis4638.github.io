@@ -1,0 +1,124 @@
+/* Reset default styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a common font for the entire page */
+body {
+    background: #74B6E7;
+    font-family: 'EB Garamond', Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Define a grid container for the entire page */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* 3 columns: 1fr, 2fr, 1fr */
+  grid-template-rows: auto auto 1fr auto; /* 4 rows: header, nav, main+aside, footer */
+  gap: 20px; /* Gap between grid items */
+  grid-template-areas:
+    "header header header"
+    "nav main main"
+    "nav aside1 aside2"
+    "footer footer footer";
+}
+
+/* Apply styles to individual grid items */
+header {
+  grid-area: header;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #E7A574;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  grid-area: main;
+  background-color: #E774B6;
+  padding: 20px;
+}
+
+aside {
+  background-color: #B6E774;
+  padding: 20px;
+}
+
+aside:nth-child(1) {
+  grid-area: aside1;
+}
+
+aside:nth-child(2) {
+  grid-area: aside2;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive design with media queries */
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Change to a single column layout */
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside1"
+      "aside2"
+      "footer";
+  }
+
+  nav ul {
+    flex-direction: column; /* Change the navigation menu to a vertical list */
+  }
+}
+
+/* Media query for very narrow screens (e.g., smartphones in portrait mode) */
+@media screen and (max-width: 320px) {
+  /* You can further customize the layout for very narrow screens if needed */
+}
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+
+.skip-link:focus::before {
+    content: "Skip to main content";
+    position: absolute;
+    left: 0;
+    top: -2.5em;
+    width: auto;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
