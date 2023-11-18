@@ -1,0 +1,91 @@
+
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 999;
+  }
+  #about img {
+    max-width: 25%; 
+    height: auto; 
+    margin-top: 10px; 
+    float: left; 
+    margin-right: 20px; 
+  }
+  
+  /* Clear the float to ensure subsequent elements are not affected */
+  #about:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .skip-to-content:focus {
+    top: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  header {
+    background-color: #007BFF;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+    flex-wrap: wrap; /* Allow navigation items to wrap to the next line on smaller screens */
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  nav a:hover {
+    background-color: #007BFF;
+  }
+  main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column by default */
+    gap: 20px;
+  }
+  section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1, h2 {
+    color: #007BFF;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* Media query for smaller screens */
+  @media screen and (min-width: 600px) {
+    nav {
+      justify-content: space-around; /* Change to space-around on larger screens */
+    }
+    main {
+      grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    }
+  }
