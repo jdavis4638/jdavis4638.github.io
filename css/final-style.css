@@ -1,13 +1,21 @@
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 999;
+  }
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
 header {
-    background-color: #3498db;
+    background-color: #2c3e50;
     color: #ecf0f1;
     padding: 1em;
     display: flex;
@@ -33,11 +41,6 @@ nav a {
     text-decoration: none;
     color: #ecf0f1;
     font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-nav a:hover {
-    color: #2c3e50;
 }
 
 main {
@@ -52,22 +55,16 @@ main {
 .hero h1 {
     font-size: 2.5em;
     margin-bottom: 0.5em;
-    color: #2c3e50;
 }
 
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #2ecc71;
+    background-color: #3498db;
     color: #ecf0f1;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.cta-button:hover {
-    background-color: #27ae60;
 }
 
 .persuasive-arguments {
@@ -75,9 +72,20 @@ main {
 }
 
 footer {
-    background-color: #2c3e50;
+    background-color: #34495e;
     color: #ecf0f1;
     padding: 1em;
     text-align: center;
 }
-
+a {
+    text-decoration: underline; /* Underline links */
+    color: #0077cc; /* Set link color to a distinct color */
+}
+a:focus {
+    outline: 2px solid #0077cc; /* Add a solid border around focused links */
+}
+.slideshow .slider {
+    margin: 0 auto; /* Center the slider */
+    max-width: 800px; /* Set a maximum width for better responsiveness */
+    height: 600px; /* Set a fixed height */
+}
