@@ -58,7 +58,20 @@ nav ul {
     list-style-type: none;
     display: flex;
 }
+h1 a{
+    color: #fff;
+}
+h1 a:hover{
+    background-color: #007BFF;
+}
 
+nav a{
+    text-decoration: underline;
+    color: #fff;
+}
+nav a:hover {
+  background-color: #007BFF;
+}
 nav ul li {
     margin-right: 20px;
 }
