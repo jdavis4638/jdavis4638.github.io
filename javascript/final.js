@@ -1,29 +1,22 @@
-$(document).ready(function(){
-    $('.fade').slick({
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear'
+// Get all list items
+const listItems = document.querySelectorAll('.dropdown-list li');
+
+// Add click event listeners to each list item
+listItems.forEach(item => {
+    const toggle = item.querySelector('.dropdown-toggle');
+
+    // Add a click event listener
+    item.addEventListener('click', () => {
+        // Toggle the 'active' class to show/hide the dropdown content
+        item.classList.toggle('active');
     });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-            const content = toggle.nextElementSibling;
-            content.classList.toggle('active');
-        });
-
-        // Add an event listener for the "keydown" event to handle the "Enter" key
-        toggle.addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Prevent the default behavior (e.g., form submission)
-                const content = toggle.nextElementSibling;
-                content.classList.toggle('active');
-            }
-        });
+    // Add a keydown event listener for accessibility
+    item.addEventListener('keydown', event => {
+        // Check if the "Enter" key is pressed
+        if (event.key === 'Enter') {
+            // Toggle the 'active' class to show/hide the dropdown content
+            item.classList.toggle('active');
+        }
     });
 });
