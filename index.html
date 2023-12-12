@@ -4,16 +4,17 @@
   <link href="css/index.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="javascript/final.js"></script>
   <title>Joseph Davis</title>
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
   <header>
+    <a class="skip-link" href="#about">Skip to main content</a>
     <h1 style="color: white;">Joseph Davis ATLS Digital Portfolio</h1>
     <nav>
-      <h2>Projects:</h2>
         <ul>
-          <h2 style="font-size: 0;">Navigation</h2> 
+          <h2>Projects:</h2>
           <li><a href="sourdough.html">Lab #2: Coding & Posting a Web Page - The Basics</a></li>
           <li><a href="accessible-page.html">Lab #3: Tables, Forms, Tabbed Browsing, and Screen Reading</a></li>
           <li><a href="grid.html">Lab #4: Accessible CSS Layout</a></li>
@@ -22,31 +23,142 @@
       </nav>
     
   </header>
-
-  <main id = "main-content">
-
-    <section id="about" class = grid>
+    <section id = "grid" class = "main-grid">
       <h2>About Me</h2>
-      <img src="img/token_1 (3).png" alt="Donald Duck.">
-      <p>
-        Hello, my name is Joseph Davis. I'm currently in my last year as a Computer Science student at the University of Colorado Boulder. Throughout my academic journey, I've had the opportunity to delve into a diverse range of computer science disciplines, from algorithm design to web development. This hands-on experience has not only sharpened my problem-solving skills but has also fueled my passion for creating innovative and user-friendly digital solutions.
-      </p>
-      <p>
-        In addition to my major in Computer Science, I am pursuing a minor in creative writing, with a specific focus on fiction. This unique combination of technical expertise and creative expression allows me to approach problem-solving from multiple perspectives. Whether crafting a compelling narrative or writing efficient code, I believe that creativity and logic are not mutually exclusive but rather powerful allies that enhance the quality of my work. As I navigate through the final year of my academic journey, I look forward to leveraging this dual skill set to contribute meaningfully to the ever-evolving landscape of technology and storytelling.
-      </p>
+      <section id="about">
+        <h2>Introduction</h2>
+        <img src="img/token_1 (3).png" alt="Donald Duck.">
+        <p>
+          Hello, my name is Joseph Davis. I'm currently in my last year as a Computer Science student at the University of Colorado Boulder. Throughout my academic journey, I've had the opportunity to delve into a diverse range of computer science disciplines, from algorithm design to web development. This hands-on experience has not only sharpened my problem-solving skills but has also fueled my passion for creating innovative and user-friendly digital solutions.
+        </p>
+        <p>
+          In addition to my major in Computer Science, I am pursuing a minor in creative writing, with a specific focus on fiction. This unique combination of technical expertise and creative expression allows me to approach problem-solving from multiple perspectives. Whether crafting a compelling narrative or writing efficient code, I believe that creativity and logic are not mutually exclusive but rather powerful allies that enhance the quality of my work. As I navigate through the final year of my academic journey, I look forward to leveraging this dual skill set to contribute meaningfully to the ever-evolving landscape of technology and storytelling.
+        </p>
+      </section>
+      <section id="interests">
+        <h2>Interests and Hobbies: </h2>
+        <p>
+          My primary interest and what I spend most of my time working on is creative writing. In particular, I've been working on a novel for the past several years, and I've learned a lot both about the process of writing which I believe apply to many areas of life.
+        </p>
+        <p>Examples: </p>
+        <ul>
+          <li>Never to show someone my first draft of anything, especially if I feel proud of it. A second or third pass never hurt, and giving myself time to reflect on what works and what does not.</li>
+          <li>My work can <strong>always</strong> be better. Understanding the difference between perfectionism and dedication is a difficult process, but "good enough" is never acceptable.</li>
+          <li>Learning when to trust my instincts, especially when something feels off. More often than not that instinct reveals underlying problems upon reflection.</li>
+          <li>There are many similarities between writing and programming. The structure of a piece follows much of the design processes in computer science. There are many parallels which can be drawn between the two.</li>
+        </ul>
+        <p> I also love baking sourdough bread.</p>
+      </section>
+      <section id = "snippet">
+        <h2>A snippet of my writing style.</h2>
+        <p>
+          Kai was adrift on an ocean, black as obsidian, iridescent as an opal, refracting the light-show of pulsars, nebulas, and galaxies birthing and dying in the cosmos overhead. She imagined that there were civilizations out there on verdant worlds orbiting life-giving stars in that delicate Goldilocks Zone. They lived and died in the blink of an eye in cosmic time. Some of them had reached out into the expanse. Most had only left epitaphs in the form of lone machines journeying across the stars: We Once Lived. But could there have been some in existence until the end? Until the very last star in the sky was consumed by equilibrium?
+          Maybe. She liked to think so.
+          <br>The display before her was the passage of millenia within seconds, and it was the misfiring of neurons in her dying brain. 
+        </p>
+      </section>
     </section>
-    
- 
-    <section id="contact">
-      <h2>Contact Me: </h2>
-      <p>
-        School Email: <a href="mailto:joda4328@colorado.edu">joda4328@colorado.edu</a>
+
+    <section>
+      <h2>Favorite Past Project</h2>
+      <p>Though not a programming project, I thoroughly enjoyed the work in the cyber-security class offered at CU Boulder.</p>
+      <p>The projects in that class largely centered around a "Capture the Flag" style, wherein we were tasked with breaking into faux-business websites. 
+        The intrigue was due to the amount of effort the instructor and TAs put into the class in order to make the process feel as immersive as possible.
       </p>
-      <p>
-        Personal Email: <a href="mailto:jdavis4638@gmail.com">jdavis4638@gmail.com</a>
-      </p>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li>"Hacking" into a business using SQL injections.</li>
+        <div class = "center-container"><img src="img/Functioning-of-an-SQL-Injection.png" alt="man-in-wheelchair"></div>
+
+        <li>Using tools like wireshark to search for unencrypted web traffic to and from a specific IP adress.</li>
+        <div class="center-container">
+          <img src="img/ws.jpg" alt="man-in-wheelchair">
+      </div>
+        <li>Sending problem packets to learn about where faults in the web traffic may exist, and using these faults to gain access to administrator passwords.</li>
+        <li>Using these admin passwords to gain access to systems such as security cameras where we could find passwords on sticky-notes at employee desks, and using these to do fun things in the system.
+          <div class="center-container">
+            <img src="img/stickynote.jpg" alt="man-in-wheelchair">
+        </div>
+
+        </li>
+      </ul>
+
+      
     </section>
+
+
     
-  </main>
+    <section class="content-section2">
+        <h2 style="text-align: center;">Lab Projects</h2>
+          <section>
+              <h2 style="text-align: center;"><a href = "sourdough.html">Lab #2: Sourdough Wiki</a></h2>
+              <div class="center-container">
+                  <img src="img/Home_made_sour_dough_bread.png" alt="homemade-sourdough-bread">
+              </div>
+              <p style="text-align: center;">Image of Sourdough Bread</p>
+              <p>This was my first time in a while working with html and css. I spent a lot of the time relearning the basics, such as the structure of HTML documents, as well as the different tags.</p>
+              <p>This was also when I realized how useful HTML5 Outliner is for learning. Being able to see how my page is laid out, as well as if there are any missing names, I was able to learn (for the first time) how to 
+                properly structure HTML documents.
+              </p>
+          </section>
+
+          <section>
+              <h2 style="text-align: center;"><a href = "accessible-page.html">Lab #3: Sourdough Hiring Company.</a></h2>
+              <div class="center-container">
+                  <img src="img/Sourdough-process.svg.png" alt="sourdough-baking-process">
+              </div>
+              <p style="text-align: center;">“Image of sourdough baking procedures.”</p>
+              <p>This project was useful in experimenting with key concepts of design such as contrast and the use of imagery, icons, and tables to break up a page.</p>
+              <p>
+                Overall this is a very basic page which I used to learn how to incorporate google icons, as well as relearn how to format HTML tables.
+              </p>
+          </section>
+
+          <section>
+              <h2 style="text-align: center;"><a href = "accessible-page.html">Lab #4: Accessible Grids and Flexboxes</a></h2>
+              <div class="center-container">
+                  <img src="img/cssaccessible.png" alt="accessible-css-layout-box">
+              </div>
+              <p style="text-align: center;">Image of a high contrast layout.</p>
+              <p>While quite hideous to look at, this was the first time I've used Adobe Color Picker outside of painting the walls in my apartment.</p>
+              <p>Despite being a bit of an eyesore, it was how I learned that high contrast makes for legible websites, even if this one was taken to the extreme.</p>
+              <p>This was also the first time in quite a while that I played around with flex boxes and CSS grids, two aspects of web design which I hadn't understood in my previous projects in other classes.</p>
+              <p>I thought it was very interesting how with the use of these things, the website was suddenly functioning on IOS/smaller screen devices.</p>
+          </section>
+
+          <section>
+              <h2 style="text-align: center;"><a href = "final-what.html">Final Project</a></h2>
+              <div class="center-container">
+                  <img src="img/wheelchairparap.png" alt="man-in-wheelchair">
+              </div>
+              <p style="text-align: center;">Image of a dextrously impaired man in a wheelchair.</p>
+              <p>The final project was the one in which I had to relearn a lot of what I learned during this semsester.
+                This required an actual understanding of the different concepts described in the other projects while also requiring good structure.
+              </p>
+              <p>
+                For example: while we have worked with grids and flex boxes in this class before, I had to learn how to put these things together in a more complicated layout. It wasn't so much about 
+                remembering the code, it was more about understanding it. It was also useful for me to have to go back to the earlier course modules for the content of this project; it acted as a refresher
+                for all that we learned during the course.
+              </p>
+              <p>There are some things I would change about it if I had the option to: </p>
+              <ul>
+                <li>
+                  Having a functioning table of contents. Currently, the table of contents dropdown does not work, and there's an issue with a key aspect of accessible design in the current implementation.
+                  Namely, it functions completely off of mouse control, requiring the user to mouseover the dropdown in order to click to go to different sections of a page.
+                </li>
+                <li>
+                  I did not add context specific text to each of the images for the visually impaired.
+                </li>
+                <li>
+                  I'm still a little unsure on the actual semantic structure of the page. This comes back to the idea of "understanding", where I'll admit that my semantic structure is 
+                  based on remembering how to code html, rather than understanding it. This is by far my biggest takeaway from this project, and something I will be working on in the future.
+                </li>
+              </ul>
+
+
+          </section>
+
+
+  </section>
 </body>
 </html>

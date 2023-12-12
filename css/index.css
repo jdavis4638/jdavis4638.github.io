@@ -1,14 +1,52 @@
 
-.skip-to-content {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    z-index: 999;
-  }
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: #fff;
+} 
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  color: #ffffff
+}
+
+.skip-link:focus::before {
+  content: "Skip to main content";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  padding: 10px;
+  background-color: #ff0000;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  outline: none; /* Remove default focus outline */
+}
+h1 a, nav li, nav ul li a, nav a{
+  color: #ffbb00;
+}
+h1 a:hover{
+  background-color: #007BFF;
+}
+p a, h2 a{
+  color: #1900ff;
+}
+p a:hover, h2 a:hover{
+  background-color: rgb(194, 188, 247);
+}
+nav a:hover, a:hover {
+background-color: #007BFF;
+}
+
   #about img {
     max-width: 25%; 
     height: auto; 
@@ -24,10 +62,23 @@
     clear: both;
   }
   
-  .skip-to-content:focus {
-    top: 0;
-  }
-  
+
+  .facts {
+    background-color: #ddd; /* Set the background color for the entire section */
+    padding: 5vw; /* Use vw (viewport width) units for responsive padding */
+}
+.main-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px;
+}
+.main-grid h1, h2{
+  text-align: center;
+  grid-column: span 2;
+}
+.facts h2 {
+    text-align: center; /* Center the heading */
+}
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -40,9 +91,10 @@
     color: #ecf0f1;
     padding: 1em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
+
   nav {
     display: flex;
     justify-content: center;
@@ -63,12 +115,7 @@
   nav a:hover {
     background-color: #007BFF;
   }
-  main {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr; /* Single column by default */
-    gap: 20px;
-  }
+
   section {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -77,7 +124,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   h1, h2 {
-    color: #007BFF;
+    color: #000000;
   }
   footer {
     background-color: #333;
@@ -86,12 +133,160 @@
     padding: 20px;
   }
 
+.content-section h3 {
+    text-align: center;
+}
+.content-section section {
+    
+    width: 100%; /* Use a percentage value for fluid scaling */
+    max-width: 100%; /* Adjust the max-width based on your design */
+    margin: 10px;
+}
+.content-section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-section2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: #ddd;
+  gap: 50px;
+  
+}
+
+.content-section2 h3, .content-section2 h1 {
+  text-align: center;
+  flex: 1;
+  order: -1; /* Bring h2 to the top */
+}
+.content-section2 h2{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-content: space-between;
+}
+.content-section2 section {
+  flex: 1;
+  max-width: 100%;
+  margin: 10px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the image */
+.center-container img {
+  max-width: 400px;
+  max-height: 500px;
+}
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ddd; /* Set a darker gray background color */
+  padding: 5vw; /* Use vw units for responsive padding */
+  margin: 0px; /* Use vw units for responsive margin */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+.impairments {
+  background-color: #ddd;
+  padding: 5vw;
+  display: grid;
+  grid-template-columns: repeat(300px, 2fr);
+  gap: 20px;
+  margin: 0 auto; /* Center the grid within its container */
+}
+
+.impairments h2 {
+  grid-column: span 2;
+  text-align: center;
+}
+
+/* Optional: If you want to style the content sections individually */
+.impairments section {
+  
+  background-color: #fff;
+  padding: 20px;
+}
+
+
   /* Media query for smaller screens */
-  @media screen and (min-width: 600px) {
-    nav {
-      justify-content: space-around; /* Change to space-around on larger screens */
+  
+  @media only screen and (max-width: 1080px) {
+
+    .main-grid {
+        grid-template-columns: 1fr; /* Change to a single column on smaller screens */
     }
-    main {
-      grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+    .main-grid h1, h2{
+      grid-column: span 1;
     }
+    .main-grid img {
+      max-width: 100%; /* Make sure images don't exceed the container width */
+      height: auto; /* Maintain the aspect ratio of images */
   }
+
+}
+@media only screen and (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr; /* Change to a single column on smaller screens */
+        text-align: center; /* Center-align the text */
+    }
+    .main-grid {
+      grid-template-columns: 1fr; /* Change to a single column on smaller screens */
+  }
+  .main-grid h1{
+    grid-column: span 1;
+  }
+    .main-grid img {
+        max-width: 100%; /* Make sure images don't exceed the container width */
+        height: auto; /* Maintain the aspect ratio of images */
+    }
+    .video-container {
+        margin-bottom: 20px; /* Adjust spacing as needed */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Make the iframe take full width on smaller screens */
+        height: 100%; /* Make the iframe take full height */
+    }
+
+    header section {
+        text-align: center; /* Center-align the content in the header section */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Adjust the font size for smaller screens */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack the navigation links vertically on smaller screens */
+        align-items: center; /* Center-align the navigation links */
+    }
+    footer h2 {
+        font-size: 1.5em; /* Adjust the font size for smaller screens */
+    }
+
+    footer form {
+        display: flex;
+        flex-direction: column; /* Stack form items vertically on smaller screens */
+    }
+
+    footer form .item,
+    footer form .item2 {
+        width: 100%; /* Make form items take full width on smaller screens */
+    }
+
+    footer form textarea {
+        height: 100px; /* Adjust the height of the textarea for better visibility */
+    }
+}
